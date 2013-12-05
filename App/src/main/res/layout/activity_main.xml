@@ -1,0 +1,194 @@
+<android.support.v4.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<RelativeLayout
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    tools:context=".MainActivity"
+    tools:ignore="MergeRootFrame">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/nofocus"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:layout_width="0px"
+        android:layout_height="0px"/>
+
+
+    <ImageView
+        android:onClick="Profile"
+        android:id="@+id/profpic"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:adjustViewBounds="true"
+        android:src="@drawable/profpic"/>
+
+    <ImageView
+        android:id="@+id/underline"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/profpic"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/underline"/>
+
+    <ImageView
+        android:id="@+id/textbubble"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:background="@drawable/textbubble"
+        android:layout_above="@id/underline"
+        android:layout_toLeftOf="@+id/profpic"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"/>
+
+    <TextView
+        android:id="@+id/username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Courtney Hamilton"
+        android:textSize="15sp"
+        android:textColor="#003366"
+        android:layout_above="@+id/textbubble"
+        android:layout_toLeftOf="@+id/profpic"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="10dp"/>
+
+    <EditText
+        android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="13sp"
+        android:text="So close yet so far."
+        android:inputType="textAutoCorrect"
+        android:background="@android:color/transparent"
+        android:layout_alignTop="@+id/textbubble"
+        android:layout_alignLeft="@+id/textbubble"
+        android:layout_alignRight="@+id/textbubble"
+        android:layout_alignBottom="@+id/textbubble"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="4dp"
+ />
+
+    <Button
+        android:id="@+id/update"
+        android:onClick="Update"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Update"
+        android:layout_below="@+id/underline"
+        android:layout_centerHorizontal="true" />
+
+
+    <RelativeLayout
+            android:id="@+id/profiletab"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_below="@+id/underline"
+            android:layout_centerHorizontal="true"
+            android:adjustViewBounds="true"
+            android:background="@drawable/profile">
+
+        <!--<TextView-->
+            <!--android:clickable="true"-->
+            <!--android:onClick="Save"-->
+            <!--android:id="@+id/save"-->
+            <!--android:text="Save"-->
+            <!--android:textColor="#003366"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignParentBottom="true"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--android:layout_marginBottom="10dp"-->
+            <!--android:layout_marginRight="30dp"-->
+            <!--/>-->
+
+        <!--<TextView-->
+            <!--android:clickable="true"-->
+            <!--android:onClick="Cancel"-->
+            <!--android:text="Cancel"-->
+            <!--android:textColor="#003366"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_toLeftOf="@+id/save"-->
+            <!--android:layout_alignParentBottom="true"-->
+            <!--android:layout_marginBottom="10dp"-->
+            <!--android:layout_marginRight="10dp"-->
+            <!--/>-->
+
+        <TextView
+            android:id="@+id/cdp"
+            android:text="Change Display Picture"
+            android:textColor="#003366"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="10dp"
+            />
+
+        <TextView
+            android:text="Display Name:"
+            android:id="@+id/displayname"
+            android:textColor="#003366"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cdp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="10dp"
+            />
+
+        <ImageView
+            android:id="@+id/namebubble2"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:background="@drawable/textbubble"
+            android:layout_below="@+id/cdp"
+            android:layout_toRightOf="@id/displayname"
+            android:layout_marginTop="25dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"/>
+
+        <EditText
+            android:id="@+id/display"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="13sp"
+            android:text="Display Name"
+            android:inputType="text"
+            android:background="@android:color/transparent"
+            android:layout_alignTop="@+id/namebubble2"
+            android:layout_alignLeft="@+id/namebubble2"
+            android:layout_alignRight="@+id/namebubble2"
+            android:layout_alignBottom="@+id/namebubble2"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="2dp"
+            />
+
+    </RelativeLayout>
+
+</RelativeLayout>
+
+    <ListView
+    android:id = "@+id/side_menu"
+    android:layout_width="82dp"
+    android:layout_height="match_parent"
+    android:layout_gravity="start"
+    android:background="@drawable/sidebar"/>
+
+</android.support.v4.widget.DrawerLayout>
